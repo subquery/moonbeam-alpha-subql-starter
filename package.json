@@ -7,7 +7,8 @@
     "build": "subql build",
     "prepack": "rm -rf dist && npm build",
     "test": "jest",
-    "codegen": "./node_modules/.bin/subql codegen"
+    "codegen": "./node_modules/.bin/subql codegen",
+    "start:docker": "docker-compose pull && docker-compose up --remove-orphans"
   },
   "homepage": "https://github.com/subquery/moonbeam-alpha-subql-starter",
   "repository": "github:subquery/moonbeam-alpha-subql-starter",
@@ -16,8 +17,11 @@
     "schema.graphql",
     "project.yaml"
   ],
-  "author": "SubQuery Network",
+  "author": "SubQuery Team",
   "license": "MIT",
+  "resolutions": {
+    "ipfs-unixfs": "6.0.6"
+  },
   "devDependencies": {
     "@polkadot/api": "^8",
     "@subql/types": "latest",
